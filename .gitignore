@@ -1,0 +1,8 @@
+/PhpStorm-*.tar.gz
+/build-stamp
+/debian/build-stamp
+/debian/files
+/debian/phpstorm.debhelper.log
+/debian/phpstorm/
+/debian/phpstorm.substvars
+*~

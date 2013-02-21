@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+
+# Change variables below if a new version is released
+VERSION=5.0.4
+BUILD=121.390
+
+build: build-stamp
+build-stamp:	
+	touch $@
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp	
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	# Untar and move upstream version
+	tar --directory $(CURDIR)/debian/phpstorm/opt -xzf PhpStorm-$(VERSION).tar.gz
+	mv $(CURDIR)/debian/phpstorm/opt/PhpStorm-$(BUILD) $(CURDIR)/debian/phpstorm/opt/PhpStorm
+
+	# Create desktop item for menu
+	cp phpstorm.desktop $(CURDIR)/debian/phpstorm/usr/share/applications
+
+	# Create symlink in /usr/bin
+	dh_link opt/PhpStorm/bin/PhpStorm.sh usr/bin/phpstorm
+
+	# Create gconf defaults for pbfile:// urls
+	cp phpstorm.schemas $(CURDIR)/debian/phpstorm/usr/share/gconf/schemas
+
+
+binary-indep: build install
+	dh_testdir -i
+	dh_testroot -i
+	dh_installdocs -i
+	dh_install -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+binary-arch: build install
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

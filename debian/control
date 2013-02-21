@@ -1,0 +1,15 @@
+Source: phpstorm
+Section: vcs
+Priority: optional
+Maintainer: Casper Langemeijer <casper@langemeijer.eu>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.8.4
+Homepage: http://www.jetbrains.com/phpstorm/
+
+Package: phpstorm
+Architecture: all
+Depends: sun-java6-jdk
+Description: PhpStorm is a lightweight and smart PHP IDE focused on developer productivity 
+ that deeply understands your code, provides smart code completion, quick 
+ navigation and on-the-fly error checking. It is always ready to help you 
+ shape your code, run unit-tests or provide visual debugging.
