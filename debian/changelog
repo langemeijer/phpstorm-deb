@@ -1,3 +1,15 @@
+phpstorm (6.0.1) precise; urgency=low
+
+  * New upstream version
+
+ -- Casper Langemeijer <casper@langemeijer.eu>  Thu, 18 Apr 2013 11:54:06 +0200
+
+phpstorm (6.0.0) precise; urgency=low
+
+  * New upstream version
+
+ -- Casper Langemeijer <casper@langemeijer.eu>  Wed, 13 Mar 2013 10:32:31 +0100
+
 phpstorm (5.0.4) precise; urgency=low
 
   * New upstream version
