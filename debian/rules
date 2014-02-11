@@ -27,7 +27,7 @@ install: build
 	cp phpstorm.desktop $(CURDIR)/debian/phpstorm/usr/share/applications
 
 	# Create symlink in /usr/bin
-	dh_link opt/PhpStorm/bin/PhpStorm.sh usr/bin/phpstorm
+	dh_link opt/PhpStorm/bin/phpstorm.sh usr/bin/phpstorm
 
 	# Create gconf defaults for pbfile:// urls
 	cp phpstorm.schemas $(CURDIR)/debian/phpstorm/usr/share/gconf/schemas
