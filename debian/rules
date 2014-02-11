@@ -3,6 +3,8 @@
 DEBVERS := $(shell dpkg-parsechangelog | sed -n -e 's/^Version: //p')
 VERSION := $(shell echo '$(DEBVERS)' | sed -e 's/^[[:digit:]]*://' -e 's/[~-].*//')
 
+BUILD=$(shell tar -tzf PhpStorm-$(VERSION).tar.gz | head -n 1 | cut -d/ -f1)
+
 build: build-stamp
 build-stamp:	
 	touch $@
