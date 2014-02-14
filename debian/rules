@@ -1,7 +1,9 @@
 #!/usr/bin/make -f
 
-# Change variables below if a new version is released
-BUILD=`tar -tzf PhpStorm-*.tar.gz | head -n 1 | cut -d/ -f1`
+DEBVERS := $(shell dpkg-parsechangelog | sed -n -e 's/^Version: //p')
+VERSION := $(shell echo '$(DEBVERS)' | sed -e 's/^[[:digit:]]*://' -e 's/[~-].*//')
+
+BUILD=$(shell tar -tzf PhpStorm-$(VERSION).tar.gz | head -n 1 | cut -d/ -f1)
 
 build: build-stamp
 build-stamp:	
@@ -20,14 +22,14 @@ install: build
 	dh_installdirs
 
 	# Untar and move upstream version
-	tar --directory $(CURDIR)/debian/phpstorm/opt -xzf PhpStorm-*.tar.gz
+	tar --directory $(CURDIR)/debian/phpstorm/opt -xzf PhpStorm-$(VERSION).tar.gz
 	mv $(CURDIR)/debian/phpstorm/opt/$(BUILD) $(CURDIR)/debian/phpstorm/opt/PhpStorm
 
 	# Create desktop item for menu
 	cp phpstorm.desktop $(CURDIR)/debian/phpstorm/usr/share/applications
 
 	# Create symlink in /usr/bin
-	dh_link opt/PhpStorm/bin/PhpStorm.sh usr/bin/phpstorm
+	dh_link opt/PhpStorm/bin/phpstorm.sh usr/bin/phpstorm
 
 	# Create gconf defaults for pbfile:// urls
 	cp phpstorm.schemas $(CURDIR)/debian/phpstorm/usr/share/gconf/schemas

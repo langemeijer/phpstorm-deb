@@ -1,3 +1,23 @@
+phpstorm (7.1.2-1) precise; urgency=low
+
+  * New upstream version
+
+ -- Bart Verwilst <bart@intux.be>  Thu, 11 Feb 2014 11:51:23 +0100
+
+phpstorm (7.1.0-1) precise; urgency=low
+
+  * New upstream version
+
+ -- Bart Verwilst <bart@intux.be>  Thu, 16 Jan 2014 17:16:26 +0100
+
+phpstorm (7.0.0) precise; urgency=low
+
+  * New upstream version
+  * Change destination for /usr/bin/phpstorm link
+  * Extend JDK dependencies
+
+ -- Bart Verwilst <bart@intux.be>  Thu, 12 Dec 2013 13:29:44 +0100
+
 phpstorm (6.0.3) precise; urgency=low
 
   * New upstream version
