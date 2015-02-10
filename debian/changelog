@@ -1,3 +1,9 @@
+phpstorm (8.0.2-1) precise; urgency=low
+
+  * New upstream version
+
+ -- Casper Langemeijer <casper@langemeijer.eu>  Tue, 10 Feb 2015 10:06:06 -0500
+
 phpstorm (8.0.1-1) trusty; urgency=medium
 
   * New upstream version
