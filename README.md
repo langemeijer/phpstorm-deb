@@ -7,10 +7,10 @@ Build scripts to easily create a `.deb` package for PhpStorm.
 Dependencies
 ------------
 
-You will need the `devscripts` package installed in order to build the PhpStorm `.deb` file:
+You will need the `devscripts` and the `debhelper` packages installed in order to build the PhpStorm `.deb` file:
 
 ```sh
-apt-get install devscripts
+apt-get install devscripts debhelper
 ```
 
 
