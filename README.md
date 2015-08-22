@@ -19,12 +19,18 @@ Building
 
 * Download the `.tar.gz` file from [PhpStorm's download page](https://www.jetbrains.com/phpstorm/download/index.html) and place it in the root directory of this repo.
 
+* Create a new debian/changelog file using the provided update.sh script:
+```sh
+update.sh
+```
+
 * Build the package with the following command:
 
 ```sh
 debuild -us -uc -b
 ```
 
+* Please 'Star' or 'Watch' the repo on github: https://github.com/langemeijer/phpstorm-deb/stargazers
 
 Installing
 ----------
@@ -36,22 +42,3 @@ dpkg -i PhpStorm...
 ```
 
 Alternatively, you can [create your own repo](https://wiki.debian.org/DebianRepository/HowTo/TrivialRepository) to host your custom `deb` packages.
-
-
-New PhpStorm Versions
----------------------
-
-If the latest version of PhpStorm is newer than the version listed in `debian/changelog`, you'll need to run the following command command to update the file:
-
-```sh
-dch -v <new-version-number> -m "New upstream version"
-```
-
-For example, if the latest version is 9.10.3, run the following:
-
-```sh
-dch -v 9.10.3-1 -m "New upstream version"
-```
-
-You can then commit the change to `debian/changelog` and submit a pull request.
-
