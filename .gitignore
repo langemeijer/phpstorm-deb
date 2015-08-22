@@ -6,3 +6,4 @@
 /debian/phpstorm/
 /debian/phpstorm.substvars
 *~
+/debian/changelog
