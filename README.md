@@ -1,3 +1,6 @@
+!! I CHANGED THE WAY THIS TOOL WORKS. SEE BELOW !!
+==================================================
+
 phpstorm-deb
 =============
 
@@ -21,7 +24,7 @@ Building
 
 * Create a new debian/changelog file using the provided update.sh script:
 ```sh
-update.sh
+./update.sh
 ```
 
 * Build the package with the following command:
@@ -41,4 +44,5 @@ Install the package with the `dpkg` command:
 dpkg -i PhpStorm...
 ```
 
-Alternatively, you can [create your own repo](https://wiki.debian.org/DebianRepository/HowTo/TrivialRepository) to host your custom `deb` packages.
+Alternatively, you can create your own [simple repo](https://wiki.debian.org/DebianRepository/HowTo/TrivialRepository) or 
+[more professional one](https://wiki.debian.org/SettingUpSignedAptRepositoryWithReprepro) to host your custom `deb` packages.
