@@ -1,6 +1,14 @@
 #!/bin/bash
 
-NUMBER_OF_FILES=`ls -1 PhpStorm-*.tar.gz | wc -l`
+NUMBER_OF_FILES=`ls -1 PhpStorm-*.tar.gz 2&>/dev/null| wc -l`
+
+if [ "$NUMBER_OF_FILES" != "" ]
+then
+	echo "There are no PhpStorm source packages in this directory."
+	echo "Please go to https://www.jetbrains.com/phpstorm/download/index.html to download the .tar.gz file and try again."
+	exit
+fi
+
 
 if [ "$NUMBER_OF_FILES" != "1" ]
 then
