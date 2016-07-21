@@ -10,15 +10,24 @@ Build scripts to easily create a `.deb` package for PhpStorm.
 Dependencies
 ------------
 
-You will need the `devscripts` and the `debhelper` packages installed in order to build the PhpStorm `.deb` file:
+You will need the `devscripts` `debhelper` `php` and `php-curl` packages installed in order to build the PhpStorm `.deb` file:
 
 ```sh
-apt-get install devscripts debhelper
+apt-get install devscripts debhelper php php-curl
 ```
 
+Build (Automatic)
+----------------
+* Run the `download_latest.php` file
+```sh
+php download_latest.php
+```
 
-Building
---------
+This will execute all steps described below.
+
+
+Building (Manuallly)
+--------------------
 
 * Download the `.tar.gz` file from [PhpStorm's download page](https://www.jetbrains.com/phpstorm/download/index.html) and place it in the root directory of this repo.
 
