@@ -4,5 +4,5 @@ Comment=PhpStorm IDE
 Exec=/opt/PhpStorm/bin/phpstorm.sh %U
 Terminal=false
 Type=Application
-Icon=/opt/PhpStorm/bin/webide.png
+Icon=/opt/PhpStorm/bin/phpstorm.png
 Categories=GNOME;GTK;Development;
