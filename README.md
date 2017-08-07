@@ -1,6 +1,3 @@
-!! I CHANGED THE WAY THIS TOOL WORKS. SEE BELOW !!
-==================================================
-
 phpstorm-deb
 =============
 
