@@ -28,12 +28,8 @@ install: build
 	# Create desktop item for menu
 	cp phpstorm.desktop $(CURDIR)/debian/phpstorm/usr/share/applications
 
-	# Create symlink in /usr/bin
-	dh_link opt/PhpStorm/bin/phpstorm.sh usr/bin/phpstorm
-
-	# Create gconf defaults for pbfile:// urls
-	cp phpstorm.schemas $(CURDIR)/debian/phpstorm/usr/share/gconf/schemas
-
+	# Copy start script to /usr/bin
+	cp phpstorm.php $(CURDIR)/debian/phpstorm/usr/bin/phpstorm
 
 binary-indep: build install
 	dh_testdir -i
