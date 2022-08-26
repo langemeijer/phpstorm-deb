@@ -8,7 +8,7 @@ Homepage: http://www.jetbrains.com/phpstorm/
 
 Package: phpstorm
 Architecture: all
-Depends: openjdk-7-jre | openjdk-8-jre | oracle-java7-installer | oracle-java8-installer | oracle-java6-installer | sun-java7-jdk | sun-java8-jdk | sun-java6-jdk, libxcursor1, libxfixes3, libxi6, libxrender1, libxtst6, php-cli
+Depends: libxcursor1, libxfixes3, libxi6, libxrender1, libxtst6, php-cli
 Recommends: fonts-dejavu-core, fonts-freefont-otf, ttf-bitstream-vera, fonts-cantarell, fonts-droid, ttf-mscorefonts-installer
 Description: PhpStorm is a lightweight and smart PHP IDE focused on developer productivity 
  that deeply understands your code, provides smart code completion, quick 
